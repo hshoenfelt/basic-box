@@ -1,0 +1,57 @@
+@use "sass:map";
+
+// root /* 14px / 16px = 0.875 = 87.5 */
+$root_font_size: 87.5%;
+
+// fonts
+$fonts: 'Open Sans','Playfair Display', "Poppins", "font-awesome", "Helvetica", "Arial", sans-serif;
+$body_font_weight: 400;
+
+$heading_font: 'Playfair Display', sans-serif;
+$heading_font_weight: 500;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&display=swap');
+
+// layout
+$sidebar_width: 33.33%;
+
+// grid
+$grid_columns: 12;
+$grid_gap: 1rem;
+
+// container max-widths
+$container_max_width:(
+"xs":      100%,
+"sm":      540px,
+"md":      720px,
+"lg":      960px,
+"xl":      1140px,
+"xxl":     1320px);
+
+// containers
+$page: map-get($container_max_width , "xl" );
+$container:  map-get($container_max_width , "xs" );
+
+// breakpoints
+$breakpoints:(
+"xs":      0,
+"sm":      576px,
+"md":      768px,
+"lg":      992px,
+"xl":      1200px,
+"xxl":     1400px);
+
+// @media max-width xsmall.
+$media_xsmall: map-get($breakpoints , "xs" );
+// @media min-width small.
+$media_small: map-get($breakpoints , "sm" );
+// @media min-width medium.
+$media_medium: map-get($breakpoints , "md" );
+// @media min-width large.
+$media_large: map-get($breakpoints , "lg" );
+// @media min-width xlarge.
+$media_xlarge: map-get($breakpoints , "xl" );
+// @media min-width xxlarge.
+$media_xxlarge: map-get($breakpoints , "xxl" );
+
+

@@ -1,0 +1,33 @@
+/* content-sidebar */
+
+// Medium Tablets Layout (Mobile First)
+@media (min-width: $media_medium) {
+
+	.page {
+		display: grid;
+		grid-template-columns: auto ($sidebar_width);
+		grid-template-areas:
+			"header header"
+			"main sidebar"
+			"footer footer";
+		gap: $grid_gap;
+	}
+
+	.header {
+		grid-area: header;
+	}
+
+	.main {
+		grid-area: main;
+		overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	}
+
+	.sidebar {
+		grid-area: sidebar;
+	}
+
+	.footer {
+		grid-area: footer;
+	}
+
+}

@@ -1,0 +1,212 @@
+// Typography
+body{
+    font-family: $fonts;
+    font-size: 1.25rem;
+	line-height: 1.75;
+    font-weight: $body_font_weight;
+}
+
+p{ 
+    padding: 0 0 1rem 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: $heading_font;
+    font-weight: $heading_font_weight;
+    line-height: 1.75;
+}
+  
+h1 {
+    margin-top: 0;
+    font-size: 4.209rem;
+}
+  
+  h2 {font-size: 3.157rem;}
+  
+  h3 {font-size: 2.369rem;}
+  
+  h4 {font-size: 1.777rem;}
+  
+  h5 {font-size: 1.333rem;}  
+  
+// Text
+strong{
+    font-size: 1rem;
+    font-weight: $heading_font_weight;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+// Links
+a{
+    color: #ff1616;
+}
+
+a:link, a:visited {
+    color: #ff1616;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+// Buttons
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+    border-radius: 4px;
+	border-color: #ff1616;
+    background-color: #ff1616;
+	color: white;
+	line-height: inherit;
+    min-width: 6rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+		background-color: #d61313;
+	}
+
+	&:active,
+	&:focus {
+        background-color: #ff1616;
+	}
+}
+
+// Forms
+textarea {
+	width: 100%;
+}
+
+// Contact Form
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+// Site navigation
+.site-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.25rem;
+}
+
+// Branding
+.logo{
+    height: 7.8125rem;
+}
+
+// Mobile Menu
+.menubar {
+    display: none;
+}
+
+.toggle{
+    font-size: 2.125rem;
+    color: #000000;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .menubar {
+    display: block;
+    position: absolute;
+    top: 6.25rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+// Structure
+.page{
+    max-width: $page;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: $container;
+    margin: 0 auto;
+}
+
+// Utility
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.gap{
+    gap: $grid_gap;
+}
+
+// Components
+
+// Extra Small (Mobile First)
+@media (max-width: $media_xsmall) {
+
+}
+
+// Small (Mobile First)
+@media (min-width: $media_small) {
+    
+}
+
+// Medium (Mobile First)
+@media (min-width: $media_medium) {
+      // Desktop Menu
+    .menubar {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu li{
+        display: inline-block;
+        &:not(:last-child){
+            padding-right: 2rem;
+        }
+    }
+
+    // Mobile Menu
+    .toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+    // Utility
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        gap: $grid_gap;
+    }
+}
+
+// Large (Mobile First)
+@media (min-width: $media_large) {
+
+}
+
+// XL Desktop (Mobile First)
+@media (min-width: $media_xlarge) {
+
+}
+
+// XXL Desktop (Mobile First)
+@media (min-width: $media_xxlarge) {
+
+}
+

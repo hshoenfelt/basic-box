@@ -1,0 +1,29 @@
+// Reset
+html {
+    box-sizing: border-box;
+    font-size: $root_font_size;
+}
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
